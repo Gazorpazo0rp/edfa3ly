@@ -27,15 +27,15 @@ ___
 ## System Inputs:
 The API accepts a post request with a body of cart and an optional currency. <br>
 The cart is a list of strings.<br>
-The available cart items are ("T-shirt","Pants","Jacket","Shoes") -- case sensitive.<br>
-The available currencies are "USD", "EGP" and "EURO". <br>
+The available cart items are [ "T-shirt" , "Pants" , "Jacket" , "Shoes" ] -- case sensitive.<br>
+The available currencies are [ "USD" , "EGP" , "EURO" ]. <br>
 ___
 ## Expected Outputs:
 The Api returns a string with bill details.<br>
 **Note:** This is not suitable for production. A better choice would be to return json object that looks like this:<br>
-{"status": "success", "subtotal": x , "taxes":y, "discounts": "some string", "total": z}
+{"status": "success", "bill" : {"subtotal": x , "taxes":y, "discounts": "some string", "total": z} }
 <br>
-However I chose the output to be a string not json encoded to be more readable. Converting to Json encoding for production purposes can be done simple, given the architecture.
+However I chose the output to be a string not json encoded to be more readable. Converting to Json encoding for production purposes can be done simply, given the architecture.
 ___
 
 ## Architecture <br>
@@ -58,6 +58,7 @@ ___
 ## Classes </li>
 
  ### Basic building units: <br>
+ 
  <ol>
   <li> Item : Encapsulates the basic unit of the system, the item. An item typically has a name and a price data members.  </li>
   <li> Currency : Encapsulates currencies. A currency has a name, a conversion rate to USD and a symbol as data members. </li>
@@ -148,5 +149,3 @@ Use postman to send post requests to the route "/cart" with body that contains:
  <br>
  The system should return a string with the details of the bill.
  
-
-

@@ -1,6 +1,19 @@
 # edfa3ly
 Edfa3ly interview OOD task.
 ___
+
+## Agenda 
+  <ul>
+    <li> Problem Description </li>
+    <li> Proposed Solution </li>
+    <li> System inputs </li>
+    <li> Expected Outputs </li>
+    <li> Architecture Pipeline (Main scenario)</li>
+    <li> Classes and their responsibilties </li>
+  </ul>
+
+___
+
 ## Problem Description
 Create a cart billing system that accepts a cart of predefined items and a currency. The system should issue a bill taking into consideration some aspects like:
 * Subtotal
@@ -8,23 +21,24 @@ Create a cart billing system that accepts a cart of predefined items and a curre
 * Discounts
 * Total
 ___
-## Solution 
+## Proposed Solution 
 - A simple php API implemented with OO fundamentals following SOLID principles.
 ___
-## System inputs:
+## System Inputs:
 The API accepts a post request with a body of cart and an optional currency. <br>
 The cart is a list of strings.<br>
 The available cart items are ("T-shirt","Pants","Jacket","Shoes") -- case sensitive.<br>
 The available currencies are "USD", "EGP" and "EURO". <br>
 ___
-## System outputs:
+## Expected Outputs:
 The Api returns a string with bill details.<br>
 **Note:** This is not suitable for production. A better choice would be to return json object that looks like this:<br>
 {"status": "success", "subtotal": x , "taxes":y, "discounts": "some string", "total": z}
 <br>
 However I chose the output to be a string not json encoded to be more readable. Converting to Json encoding for production purposes can be done simple, given the architecture.
 ___
-<h2> Architecture Pipeline (Main scenario):</h2> <br>
+
+## Architecture Pipeline (Main scenario): <br>
 <ol>
   <li> index.php is the entry point to the API. It naively validates the request and creates a billing manager object. <br>
     It invokes the getBill method and wait for the program to finish.
@@ -41,7 +55,8 @@ ___
 
 ___
 
-## Classes and their responsibilties. 
+## Classes and their responsibilties </li>
+</ul>
   ### Basic building units: <br>
  <ol>
   <li> Item : Encapsulates the basic unit of the system, the item. An item typically has a name and a price data members.  </li>
@@ -119,12 +134,12 @@ ___
   <li> An API testing tool -- **preferably Postman **</li>
 </ul>
 
-### File System
+### File System:
 Clone this repo inside a folder named "edfa3ly" in the root of your server, where localhost points. <br>
 If you're using Xampp you file system should look something like this:<br>
 Xampp --> htdocs --> edfa3ly --> index.php and other files in the repository.
 
-### Integration testing 
+### Integration testing:
 Use postman to send post requests to the route "/cart" with body that contains:
 <ul>
   <li> cart => Array of valid items in string format, separated by commas. Supported items are ["Pants" , "Shoes" , "T-shirt" , "Jacket"] -- case sensitive.</li>

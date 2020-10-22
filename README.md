@@ -32,10 +32,10 @@ ___
   <li> Billing Manager validates the cart and the currency. Then it creates a Bill object and invokes issueBill method that returns a bill. 
   </li>
   <li> Bill::issueBill follows this simple pipeline:<br>
-    3.1. Calculate subtotal.<br>
-    3.2. Apply 14% vat.<br>
-    3.3. Check and apply discounts through DiscountManager.<br>
-    3.4. Formats the bill and return it.<br>
+    3.1 Calculate subtotal.<br>
+    3.2 Apply 14% vat.<br>
+    3.3 Check and apply discounts through DiscountManager.<br>
+    3.4 Formats the bill and return it.<br>
   </li>
 </ol> 
 ___ 

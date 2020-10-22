@@ -109,3 +109,29 @@ ___
    </li>
  </ol>
   
+ ___
+ 
+## How to run:
+### Prequisites:
+<ul>
+  <li> PHP 7.x</li>
+  <li> PHP Server - XAMPP is preferred </li>
+  <li> An API testing tool -- **preferably Postman **</li>
+</ul>
+
+### File System
+Clone this repo inside a folder named "edfa3ly" in the root of your server, where localhost points. <br>
+If you're using Xampp you file system should look something like this:<br>
+Xampp --> htdocs --> edfa3ly --> index.php and other files in the repository.
+
+### Integration testing 
+Use postman to send post requests to the route "/cart" with body that contains:
+<ul>
+  <li> cart => Array of valid items in string format, separated by commas. Supported items are ["Pants" , "Shoes" , "T-shirt" , "Jacket"] -- case sensitive.</li>
+  <li> **Optional**: currency => A currency in string format. Supported currencies are ["USD" , "EGP", "EURO"].</li>
+ </ul>
+ <br>
+ The system should return a string with the details of the bill.
+ 
+
+

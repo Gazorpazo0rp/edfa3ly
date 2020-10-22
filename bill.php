@@ -59,10 +59,10 @@ class Bill{
         // adds 14% to the total
         $vat =$this->vat * $this->total;
         $this->total+= $vat;
-        $this->billDetails .= "Taxes: " . $vat .= "\n";
+        $this->billDetails .= "Taxes: " . $vat ." ". $this->currencyManager->getSymbol($this->currency) . "\n";
     }
     private function printTotal(){
-        $this->billDetails .= "Total: " . $this->total .="\n";
+        $this->billDetails .= "Total: " . $this->total . " " . $this->currencyManager->getSymbol($this->currency) ."\n";
     }
     public function issueBill(){
         // System core pipeline

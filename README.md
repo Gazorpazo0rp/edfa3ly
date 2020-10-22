@@ -10,6 +10,7 @@ ___
     <li> Expected Outputs </li>
     <li> Architecture Pipeline (Main scenario)</li>
     <li> Classes and their responsibilties </li>
+    <li> How to run </li>
   </ul>
 
 ___

@@ -37,7 +37,7 @@ ___
     3.3. Check and apply discounts through DiscountManager.<br>
     3.4. Formats the bill and return it.<br>
   </li>
-</ol> <br>
+</ol> 
 ___ 
 ## Classes and their responsibilties. 
   1. Basic building units: <br>

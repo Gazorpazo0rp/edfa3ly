@@ -24,7 +24,7 @@ The Api returns a string with bill details.<br>
 <br>
 However I chose the output to be a string not json encoded to be more readable. Converting to Json encoding for production purposes can be done simple, given the architecture.
 ___
-## Architecture Pipeline (Main scenario): <br>
+<h2> Architecture Pipeline (Main scenario):</h2> <br>
 <ol>
   <li> index.php is the entry point to the API. It naively validates the request and creates a billing manager object. <br>
     It invokes the getBill method and wait for the program to finish.
@@ -38,7 +38,9 @@ ___
     3.4 Formats the bill and return it.<br>
   </li>
 </ol> 
-___ 
+
+___
+
 ## Classes and their responsibilties. 
   1. Basic building units: <br>
  <ol>

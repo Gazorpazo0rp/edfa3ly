@@ -77,3 +77,35 @@ ___
     </ul>
   </li>
   <li> CurrencyManager: Responsibilities:<br>
+    <ul>
+      <li> Inits supported currencies. </li>
+      <li> Has some utilities like converting an amount from USD (the default currency) to any supported currency.</li>
+    </ul>
+  </li>
+  <li> DiscountManager : Responsibilities:<br>
+    <ul>
+      <li> Inits system offers.</li>
+      <li> Calculates discounts for a cart. Typically loops through the supported offers and applies the offer if it can be applied. </li>
+      <li> Has a method that returns the discounts details for the bill to be printed.</li>
+    </ul>
+  </li>
+  <li> BillingManager: Responsibilities: <br>
+    <ul>
+      <li> Uses the validator concrete classes to validate the cart and currency. If Both are valid, It creates a bill object and psses them on to issue the bill. Otherwise throws error message </li>
+    </ul>
+  </li>
+  <li> Bill : Responsibilities: <br>
+    <ul> 
+      <li> The constructor sets up an empty bill. </li>
+      <li> issueBill method executes this sequence of actions:
+        <ol>
+          <li> Calculate subtotal.</li>
+          <li> Applies taxes. </li>
+          <li> invokes DiscountManager:: calcDiscounts to apply all possible discounts.</li>
+          <li< Finally, Updates the total and return a bill as a string. </li>
+        </ol>
+      </li>
+    </ul>
+   </li>
+ </ol>
+  

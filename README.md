@@ -7,11 +7,12 @@ Edfa3ly interview OOD task.
   
    * [Problem Description](#problem-description) <br>
    * [Proposed Solution](#proposed-solution) <br>
-   * [System inputs](#system-inputs)
+   * [System Inputs](#system-inputs)
    * [Expected Outputs](#expected-outputs)
    * [Architecture](#architecture-)
    * [Classes](#classes-)
-   * [How to run](#how-to-run)
+   * [How To Run](#how-to-run)
+   * [Missing Requirements](#missing-requirements)
   
 
 
@@ -145,3 +146,9 @@ Use postman to send post requests to the route "/cart" with body that contains:
  <br>
  The system should return a string with the details of the bill.
  
+ ### Missing Requirements <br>
+ <ul>
+  <li> Unit testing </li>
+ </ul>
+ ** Note ** Integration testing was conducted. No unit tests are written though. I used unit testing before with C++ tool called Catch2. However I didn't make unit tests with PHPUnit before. 
+  

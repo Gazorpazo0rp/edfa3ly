@@ -58,8 +58,8 @@ ___
 ___
 
 ## Classes </li>
-</ul>
-  ### Basic building units: <br>
+
+ ### Basic building units: <br>
  <ol>
   <li> Item : Encapsulates the basic unit of the system, the item. An item typically has a name and a price data members.  </li>
   <li> Currency : Encapsulates currencies. A currency has a name, a conversion rate to USD and a symbol as data members. </li>

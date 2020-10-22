@@ -1,18 +1,20 @@
-# edfa3ly
+# Edfa3ly
 Edfa3ly interview OOD task.
-___
+
+
 
 ## Agenda 
   
    * [Problem Description](#problem-description) <br>
    * [Proposed Solution](#proposed-solution) <br>
-   * [System inputs](#system-inputs)
+   * [System Inputs](#system-inputs)
    * [Expected Outputs](#expected-outputs)
    * [Architecture](#architecture-)
    * [Classes](#classes-)
-   * [How to run](#how-to-run)
+   * [How To Run](#how-to-run)
+   * [Missing Requirements](#missing-requirements-)
   
-___
+
 
 ## Problem Description
 Create a cart billing system that accepts a cart of predefined items and a currency. The system should issue a bill taking into consideration some aspects like:
@@ -20,23 +22,22 @@ Create a cart billing system that accepts a cart of predefined items and a curre
 * Vat
 * Discounts
 * Total
-___
+
 ## Proposed Solution 
 - A simple php API implemented with OO fundamentals following SOLID principles.
-___
+
 ## System Inputs:
 The API accepts a post request with a body of cart and an optional currency. <br>
 The cart is a list of strings.<br>
 The available cart items are [ "T-shirt" , "Pants" , "Jacket" , "Shoes" ] -- case sensitive.<br>
 The available currencies are [ "USD" , "EGP" , "EURO" ]. <br>
-___
+
 ## Expected Outputs:
 The Api returns a string with bill details.<br>
 **Note:** This is not suitable for production. A better choice would be to return json object that looks like this:<br>
 {"status": "success", "bill" : {"subtotal": x , "taxes":y, "discounts": "some string", "total": z} }
 <br>
 However I chose the output to be a string not json encoded to be more readable. Converting to Json encoding for production purposes can be done simply, given the architecture.
-___
 
 ## Architecture <br>
 <ol>
@@ -52,8 +53,6 @@ ___
     3.4. Formats the bill and return it.<br>
   </li>
 </ol> 
-
-___
 
 ## Classes </li>
 
@@ -125,8 +124,6 @@ ___
    </li>
  </ol>
   
- ___
- 
 ## How to run:
 ### Prequisites:
 <ul>
@@ -149,3 +146,9 @@ Use postman to send post requests to the route "/cart" with body that contains:
  <br>
  The system should return a string with the details of the bill.
  
+ ### Missing Requirements <br>
+ <ul>
+  <li> Unit testing </li>
+ </ul>
+ ** Note ** Integration testing was conducted. No unit tests are written though. I used unit testing before with C++ tool called Catch2. However I didn't make unit tests with PHPUnit before. 
+  

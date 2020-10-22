@@ -102,7 +102,7 @@ ___
           <li> Calculate subtotal.</li>
           <li> Applies taxes. </li>
           <li> invokes DiscountManager:: calcDiscounts to apply all possible discounts.</li>
-          <li< Finally, Updates the total and return a bill as a string. </li>
+          <li> Finally, Updates the total and return a bill as a string. </li>
         </ol>
       </li>
     </ul>

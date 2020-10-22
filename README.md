@@ -10,11 +10,10 @@ ___
    * [Proposed Solution](#proposed-solution) <br>
    * [System inputs](#system-inputs)
    * [Expected Outputs](#expected-outputs)
-   * [Architecture](#architecture)
-   * [Classes](#classes)
+   * [Architecture](#architecture-)
+   * [Classes](#classes-)
    * [How to run](#how-to-run)
   
-
 ___
 
 ## Problem Description

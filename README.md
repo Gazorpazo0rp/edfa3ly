@@ -144,6 +144,7 @@ Use postman to send post requests to the route "/cart" with body that contains:
   <li> [Optional] : currency => A currency in string format. Supported currencies are ["USD" , "EGP", "EURO"].</li>
  </ul>
  <br>
+ ![Postman Example](https://github.com/[Gazorpazo0rp]/[edfa3ly]/blob/[main]/example.PNG?raw=true)
  The system should return a string with the details of the bill.
  
  ### Missing Requirements <br>

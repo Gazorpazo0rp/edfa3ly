@@ -37,8 +37,8 @@ ___
     3.3. Check and apply discounts through DiscountManager.<br>
     3.4. Formats the bill and return it.<br>
   </li>
-</ol>
-___
+</ol> <br>
+___ 
 ## Classes and their responsibilties. 
   1. Basic building units: <br>
  <ol>
@@ -55,10 +55,10 @@ ___
   <li> CurrencyValidator : Extends the <em>Validator</em> class and also implements <em>validate</em> method.<br>
     The validate method makes sure that the currency submitted is supported by the system. Otherwise throws <em> invalid currency </em>.
   </li>
-  <li> ** ShoesOffer ** : Extends the <em>offer</em> class and implements <em>calcDiscount</em> method. <br>
+  <li> ShoesOffer : Extends the <em>offer</em> class and implements <em>calcDiscount</em> method. <br>
     If the offer applies to the cart, It sets the boolean <em>offerIsApplied</em> for implementation purposes.
   </li>
-  <li> ** TshirtJacketOffer ** : Extends the <em>offer</em> class and implements <em>calcDiscount</em> method. <br>
+  <li> TshirtJacketOffer : Extends the <em>offer</em> class and implements <em>calcDiscount</em> method. <br>
     If the offer applies to the cart, It sets the boolean <em>offerIsApplied</em> for implementation purposes.
   </li>
  </ol>

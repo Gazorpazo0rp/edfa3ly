@@ -140,7 +140,7 @@ Xampp --> htdocs --> edfa3ly --> index.php and other files in the repository.
 ### Integration testing:
 Use postman to send post requests to the route "/cart" with body that contains:
 <ul>
-  <li> cart => Array of valid items in string format, separated by commas. Supported items are ["Pants" , "Shoes" , "T-shirt" , "Jacket"] -- case sensitive.</li>
+  <li> cartItems => Array of valid items in string format, separated by commas. Supported items are ["Pants" , "Shoes" , "T-shirt" , "Jacket"] -- case sensitive.</li>
   <li> [Optional] : currency => A currency in string format. Supported currencies are ["USD" , "EGP", "EURO"].</li>
  </ul>
 The system should return a string with the details of the bill.

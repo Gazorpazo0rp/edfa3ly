@@ -21,6 +21,7 @@ class ItemsManager{
         return $this->items;
     }
     public function getItemsNamesOnly(){
+        // needed for validating the cart
         $itemsNames=[];
         foreach($this->items as $item){
             array_push($itemsNames,$item->getName());
@@ -28,6 +29,7 @@ class ItemsManager{
         return $itemsNames;
     }
     public function getItemPrice($itemName){
+        // get Item price by name
         foreach($this->items as $item){
             if($item->getName()== $itemName) return $item->getPrice();
         }

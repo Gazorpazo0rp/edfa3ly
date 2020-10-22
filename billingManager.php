@@ -10,6 +10,7 @@ class BillingManager{
     private $currencyValidator=null;
     private $currencyManager=null;
     public function __construct(){
+        // Create Managers to handle validation and currency conversions.
         $this->itemsManager= new ItemsManager();
         $this->currencyManager=new CurrencyManager();
         $this->cartValidator=new CartValidator($this->itemsManager->getItemsNamesOnly());
@@ -21,11 +22,12 @@ class BillingManager{
         if(! $cartIsValid) {
             return "invalid cart";
         }
+        // validate the currency
         $currencyIsValid=$this->currencyValidator->validate($currency);
         if(! $currencyIsValid){
             return "invalid currency";
         }
-        // cart is valid
+        // cart and currency are valid
         // issue bill 
         $bill = new Bill($cartItems,$currency,$this->itemsManager);
         return $bill->issueBill();

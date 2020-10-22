@@ -8,6 +8,7 @@ class ShoesOffer extends Offer{
         $this->offerName="10% off shoes: ";
     }
     public function calcDiscount($cart){
+        // implement the virtual function -- The logic of the offer
         if($this->status!="ACTIVE") return false; // the offer is not active right now;
         foreach($cart as $cartItem){
             if($cartItem=="Shoes"){
@@ -17,6 +18,4 @@ class ShoesOffer extends Offer{
         }
         return $this->offerIsApplied;
     }
-    
-    
 }

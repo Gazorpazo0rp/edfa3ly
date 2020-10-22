@@ -13,6 +13,7 @@ class CurrencyManager{
         array_push($this->currencies,$euro);
     }
     public function getCurrenciesNamesOnly(){
+        // This method is needed to validate the currency submitted by the client.
         $names=[];
         foreach($this->currencies as $currency){
             array_push($names,$currency->getName());
@@ -28,6 +29,7 @@ class CurrencyManager{
         }
     }
     public function getSymbol($currencyName){
+        // return a sybmol of a currency for printing purposes.
         foreach($this->currencies as $currency){
             if($currency->getName()==$currencyName){
                 return $currency->getSymbol();

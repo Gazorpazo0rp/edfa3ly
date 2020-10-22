@@ -22,11 +22,14 @@ class Bill{
         $this->currencyManager=new CurrencyManager();
     }
     private function calcSubtotal(){
+        // loop through items, and calculate the subtotal in usd
         foreach($this->cartItems as $cartItem){
             $this->subtotal+=$this->itemsManager->getItemPrice($cartItem);
         }
+        // convert to desired currency 
         $this->subtotal = $this->currencyManager->convert($this->subtotal,$this->currency);
         $this->total=$this->subtotal;
+        // Append subtotal details to the bill
         $this->billDetails .="Subtotal: ". $this->subtotal ." ". $this->currencyManager->getSymbol($this->currency)."\n";
     }
     private function getBillDetails(){
@@ -39,16 +42,21 @@ class Bill{
         $this->total += $updateAmount;
     }
     private function calcDiscount(){
+        // create a discount manager, Pass a currency manager because it'll need some conversion operations.
         $discountManager=new DiscountManager($this->currencyManager,$this->currency);
+        // Execute the discounts 
         $discountManager->calcDiscounts($this->cartItems);
+        // update the total
         $this->total -=$discountManager->getTotalDiscount();
+        // If at least one discount happened, append the details to the bill
         if($discountManager->getTotalDiscount()>0){
             // a discount actually was applied
             $this->billDetails .= "Discounts: " ."\n";
+            $this->appendToBillDetails($discountManager->getDiscountsDetails());
         }
-        $this->appendToBillDetails($discountManager->getDiscountsDetails());
     }
     private function applyVat(){
+        // adds 14% to the total
         $vat =$this->vat * $this->total;
         $this->total+= $vat;
         $this->billDetails .= "Taxes: " . $vat .= "\n";
@@ -57,10 +65,10 @@ class Bill{
         $this->billDetails .= "Total: " . $this->total .="\n";
     }
     public function issueBill(){
+        // System core pipeline
         $this->calcSubtotal();
         $this->applyVat();
         $this->calcDiscount();
-        //Add vat
         $this->PrintTotal();
         return $this->billDetails;
     }

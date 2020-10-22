@@ -8,6 +8,7 @@ class DiscountManager{
     private $currency;
     private $totalDiscount;
     public function __construct($currencyManager,$currency){
+        // inits discounts supported by the system.
         $this->offers=[];
         $this->totalDiscount=0;
         $this->discountsDetails="";
@@ -19,7 +20,6 @@ class DiscountManager{
         array_push($this->offers,$tshirtJacketOffer);
     }
     public function calcDiscounts($cart){
-        
         foreach($this->offers as $offer){
             //check if this offer applies to the given cart
             // if it applies, convert it to suitable currency and append it to the discountsDetails

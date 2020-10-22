@@ -7,6 +7,7 @@ class TshirtJacketOffer extends offer{
         $this->offerName="50% off jacket: ";
     }
     public function calcDiscount($cart){
+        // implement the virtual function -- The logic of the offer
         $numberOfTshirts=0;
         $numberOfJackets=0;
         foreach($cart as $cartItem){

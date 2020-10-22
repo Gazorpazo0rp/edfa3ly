@@ -4,7 +4,7 @@ ___
 
 ## Agenda 
   <ul>
-    [Problem Description](https://github.com/Gazorpazo0rp/edfa3ly/blob/main/README.md#problem-description) 
+    <li> [Problem Description](#problem-description) </li>
     <li> Proposed Solution </li>
     <li> System inputs </li>
     <li> Expected Outputs </li>

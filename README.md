@@ -2,16 +2,18 @@
 Edfa3ly interview OOD task.
 ___
 
+[Problem Description](#problem-description)
+
 ## Agenda 
-  <ul>
-    <li> [Problem Description]:https://github.com/Gazorpazo0rp/edfa3ly/blob/main/README.md#problem-description </li>
-    <li> Proposed Solution </li>
-    <li> System inputs </li>
-    <li> Expected Outputs </li>
-    <li> Architecture Pipeline (Main scenario)</li>
-    <li> Classes and their responsibilties </li>
-    <li> How to run </li>
-  </ul>
+  
+   * [Problem Description](#problem-description) <br>
+   * [Proposed Solution](#proposed-solution) <br>
+   * [System inputs](#system-inputs)
+   * [Expected Outputs](#expected-outputs)
+   * [Architecture Pipeline (Main scenario)](#architecture-pipeline-(main-scenario))
+   * [Classes and their responsibilties](#classes-and-their-responsibilties)
+   * [How to run](#how-to-run)
+  
 
 ___
 

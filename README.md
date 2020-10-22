@@ -10,8 +10,8 @@ ___
    * [Proposed Solution](#proposed-solution) <br>
    * [System inputs](#system-inputs)
    * [Expected Outputs](#expected-outputs)
-   * [Architecture Pipeline (Main scenario)](#architecture-pipeline-(main-scenario))
-   * [Classes and their responsibilties](#classes-and-their-responsibilties)
+   * [Architecture](#architecture)
+   * [Classes](#classes)
    * [How to run](#how-to-run)
   
 
@@ -41,7 +41,7 @@ The Api returns a string with bill details.<br>
 However I chose the output to be a string not json encoded to be more readable. Converting to Json encoding for production purposes can be done simple, given the architecture.
 ___
 
-## Architecture Pipeline (Main scenario): <br>
+## Architecture <br>
 <ol>
   <li> index.php is the entry point to the API. It naively validates the request and creates a billing manager object. <br>
     It invokes the getBill method and wait for the program to finish.
@@ -58,7 +58,7 @@ ___
 
 ___
 
-## Classes and their responsibilties </li>
+## Classes </li>
 </ul>
   ### Basic building units: <br>
  <ol>

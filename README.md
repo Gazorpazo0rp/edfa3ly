@@ -143,10 +143,10 @@ Use postman to send post requests to the route "/cart" with body that contains:
   <li> cart => Array of valid items in string format, separated by commas. Supported items are ["Pants" , "Shoes" , "T-shirt" , "Jacket"] -- case sensitive.</li>
   <li> [Optional] : currency => A currency in string format. Supported currencies are ["USD" , "EGP", "EURO"].</li>
  </ul>
- <br>
- ![Postman Example](https://github.com/[Gazorpazo0rp]/[edfa3ly]/blob/[main]/example.PNG?raw=true)
- The system should return a string with the details of the bill.
- 
+The system should return a string with the details of the bill.
+
+![picture](example.PNG) 
+
  ### Missing Requirements <br>
  <ul>
   <li> Unit testing </li>

@@ -19,8 +19,22 @@ The available currencies are "USD", "EGP" and "EURO". <br>
 ___
 ## System outputs:
 The Api returns a string with bill details.<br>
-**Note** This is not suitable for production. A better choice would be to return json object that looks like this:<br>
+**Note:** This is not suitable for production. A better choice would be to return json object that looks like this:<br>
 {"status": "success", "subtotal": x , "taxes":y, "discounts": "some string", "total": z}
 <br>
 However I chose the output to be a string not json encoded to be more readable. Converting to Json encoding for production purposes can be done simple, given the architecture.
 ___
+## Architecture Pipeline (Main scenario): <br>
+<ol>
+  <li> index.php is the entry point to the API. It naively validates the request and creates a billing manager object. <br>
+    It invokes the getBill method and wait for the program to finish.
+  </li>
+  <li> Billing Manager validates the cart and the currency. Then it creates a Bill object and invokes issueBill method that returns a bill. 
+  </li>
+  <li> Bill::issueBill follows this simple pipeline:<br>
+    * Calculate subtotal.
+    * Apply 14% vat.
+    * Check and apply discounts through DiscountManager.
+    * Formats the bill and return it.
+  </li>
+ <ol>
